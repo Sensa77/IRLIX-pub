@@ -1,7 +1,7 @@
 import React from "react";
 
-import CardItem from "./card-item/card-item";
-import Bookmark from "./bookmark";
+import CardItem from "../card-item/card-item";
+import Bookmark from "../bookmark/bookmark";
 
 const Cards = () => {
   return (

@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/Roboto-Regular.woff") format("woff"),
+    url("../src/fonts/Roboto-Regular.eot") format("eot"),
+    url("../src/fonts/Roboto-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/Roboto-Italic.woff") format("woff"),
+    url("../src/fonts/Roboto-Italic.eot") format("eot"),
+    url("../src/fonts/Roboto-Italic.ttf") format("ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/Roboto-Bold.woff") format("woff"),
+    url("../src/fonts/Roboto-Bold.eot") format("eot"),
+    url("../src/fonts/Roboto-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/Roboto-BoldItalic.woff") format("woff"),
+    url("../src/fonts/Roboto-BoldItalic.eot") format("eot"),
+    url("../src/fonts/Roboto-BoldItalic.ttf") format("ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+  text-transform: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: #201f2e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import CardItem from "./card-item/card-item";
+import CardItem from "../card-item/card-item";
 
 const Bookmark = ({ children }) => {
   return (
