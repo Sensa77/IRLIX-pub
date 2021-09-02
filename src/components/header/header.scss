@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__wrapper {
+  padding-top: 32px;
+  text-align: start;
+  align-items: flex-start;
+}
+
+.header__title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+.header__data {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+  color: #c4c1cf;
+}
