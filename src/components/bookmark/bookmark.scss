@@ -1,6 +1,14 @@
+.bookmark {
+  position: relative;
+}
+
 .bookmark__btn {
+  display: grid;
+  row-gap: 28px;
   position: absolute;
-  right: 68px;
+  top: -4px;
+  right: 36px;
   border: none;
   background-color: initial;
+  z-index: 1;
 }

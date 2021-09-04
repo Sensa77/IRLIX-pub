@@ -9,7 +9,7 @@ import "./app.scss";
 
 const App = () => {
   return (
-    <div className="app container">
+    <div className="app">
       <ErrorBoundary>
         <Header />
         <Filter />

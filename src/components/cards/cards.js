@@ -10,6 +10,9 @@ const Cards = () => {
       <Bookmark>
         <CardItem></CardItem>
       </Bookmark>
+      <Bookmark>
+        <CardItem></CardItem>
+      </Bookmark>
     </main>
   );
 };
