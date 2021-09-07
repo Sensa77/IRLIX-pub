@@ -1,9 +1,10 @@
 .app {
-  width: 384px;
+  min-width: 320px;
+  max-width: 767px;
   margin: 0 auto;
 }
 
-.filter__list {
+.header-wp {
   margin-bottom: 48px;
 }
 
