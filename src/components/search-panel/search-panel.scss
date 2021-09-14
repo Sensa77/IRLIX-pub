@@ -3,7 +3,6 @@
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  width: 384px;
   background-color: #0e0d13;
   border-radius: 32px 32px 0 0;
   padding-left: 32px;
@@ -11,6 +10,7 @@
   padding-top: 24px;
   padding-bottom: 24px;
   bottom: 0;
+  z-index: 2;
 }
 
 .search-panel__button {

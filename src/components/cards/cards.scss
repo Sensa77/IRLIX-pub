@@ -1,7 +1,18 @@
 .cards {
+  max-width: 1920px;
   display: grid;
   row-gap: 28px;
+  column-gap: 32px;
   position: relative;
-  padding-right: 8.3%;
-  padding-left: 8.3%;
+  padding-right: 32px;
+  padding-left: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .cards {
+    min-width: 768px;
+    // max-width: 1920px;
+    column-gap: 32px;
+  }
 }

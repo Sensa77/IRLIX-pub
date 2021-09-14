@@ -3,7 +3,7 @@ import "./filter.scss";
 
 const Filter = () => {
   return (
-    <nav className="filter">
+    <div className="filter">
       <ul className="filter__list">
         <li>
           <button type="button" className="filter__item">
@@ -26,7 +26,7 @@ const Filter = () => {
           </button>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 };
 
