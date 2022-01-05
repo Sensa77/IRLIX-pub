@@ -1,0 +1,22 @@
+.header__img {
+  display: block;
+  width: auto;
+  height: 400px;
+  z-index: 0;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.header__back {
+  display: block;
+  position: fixed;
+  top: 33px;
+  left: 32px;
+  width: 64px;
+  height: 64px;
+  background-color: #44414e;
+  border-radius: 16px;
+  border: 1px solid #000;
+  padding-top: 7px;
+  z-index: 6;
+}

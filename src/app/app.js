@@ -7,14 +7,20 @@ import HeaderWp from "../components/header-wp/header-wp";
 import "../index.scss";
 import "../normalize.scss";
 import "./app.scss";
+import Main from "../components/pages/main";
+import DetailPage from "../components/pages/detail-page";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="app">
       <ErrorBoundary>
-        <HeaderWp />
-        <Cards />
-        <SearchPanel />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Main />}></Route>
+            <Route path="/detail" element={<DetailPage />}></Route>
+          </Routes>
+        </Router>
       </ErrorBoundary>
     </div>
   );
