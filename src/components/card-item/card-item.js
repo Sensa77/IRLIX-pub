@@ -6,9 +6,7 @@ const CardItem = () => {
     <Link to="/detail">
       <div className="cardItem">
         <div className="cardItem__wp">
-          <span to="/detail" className="cardItem__name">
-            Blackberry
-          </span>
+          <span className="cardItem__name">Blackberry</span>
           <span className="cardItem__filter">Fresh drink</span>
         </div>
         <div className="cardItem__composition">

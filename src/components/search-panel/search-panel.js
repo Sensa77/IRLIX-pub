@@ -1,5 +1,6 @@
 import React from "react";
 import "./search-panel.scss";
+import { Link } from "react-router-dom";
 
 const SearchPanel = () => {
   return (

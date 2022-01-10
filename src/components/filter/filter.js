@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./filter.scss";
 
 const Filter = () => {
@@ -6,9 +7,11 @@ const Filter = () => {
     <div className="filter">
       <ul className="filter__list">
         <li>
-          <button type="button" className="filter__item">
-            Новинки
-          </button>
+          <Link to="./favorite">
+            <button type="button" className="filter__item">
+              Новинки
+            </button>
+          </Link>
         </li>
         <li>
           <button type="button" className="filter__item">

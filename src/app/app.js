@@ -9,6 +9,7 @@ import "../normalize.scss";
 import "./app.scss";
 import Main from "../components/pages/main";
 import DetailPage from "../components/pages/detail-page";
+import Favorite from "../components/pages/favorite";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Main />}></Route>
             <Route path="/detail" element={<DetailPage />}></Route>
+            <Route path="/favorite" element={<Favorite></Favorite>}></Route>
           </Routes>
         </Router>
       </ErrorBoundary>

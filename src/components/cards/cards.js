@@ -2,6 +2,7 @@ import React from "react";
 
 import CardItem from "../card-item/card-item";
 import Bookmark from "../bookmark/bookmark";
+import Empty from "../empty/empty";
 import "./cards.scss";
 
 const Cards = () => {
@@ -25,6 +26,7 @@ const Cards = () => {
       <Bookmark>
         <CardItem></CardItem>
       </Bookmark>
+      <Empty></Empty>
     </main>
   );
 };

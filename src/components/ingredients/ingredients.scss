@@ -15,6 +15,7 @@
 .ingredients__list {
   padding-left: 0;
   margin: 0;
+  width: -webkit-fill-available;
 }
 
 .ingredients__item {
@@ -22,7 +23,6 @@
   text-align: start;
   position: relative;
   overflow: hidden;
-  width: 325px;
 }
 
 .ingredients__item::after {
@@ -47,3 +47,15 @@
   z-index: 2;
   padding-left: 2px;
 }
+
+// @media (min-width: 768px) {
+//   .ingredients__item {
+//     width: 700px;
+//   }
+// }
+
+// @media (min-width: 1024px) {
+//   .ingredients__item {
+//     width: 980px;
+//   }
+// }

@@ -6,13 +6,11 @@ import "./body-detail.scss"
 
 const BodyDetail = () => {
   return (
-    <div>
       <div className='body-wp'>
         <Title></Title>
         <Ingredients></Ingredients>
         <Recipe></Recipe>
       </div>
-    </div>
   )
 }
 
