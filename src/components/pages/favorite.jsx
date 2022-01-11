@@ -1,14 +1,14 @@
 import React from 'react';
-import CardItem from '../card-item/card-item';
-import Header from '../header/header';
+import Cards from '../cards/cards';
 import SearchPanel from '../search-panel/search-panel';
+import HeaderWp from "../header-wp/header-wp"
 
 const Favorite = () => {
   return (
     <div>
-      <Header title='Избранные'></Header>
-      <CardItem></CardItem>
-      <SearchPanel></SearchPanel>
+    <HeaderWp title="Избранные"></HeaderWp>
+      <Cards></Cards>
+      <SearchPanel address="/" text="Назад"></SearchPanel>
     </div>
   )
 }

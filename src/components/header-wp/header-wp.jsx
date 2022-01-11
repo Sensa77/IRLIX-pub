@@ -5,10 +5,10 @@ import "../filter/filter";
 import Header from "../header/header";
 import Filter from "../filter/filter";
 
-const HeaderWp = () => {
+const HeaderWp = ({ title }) => {
   return (
     <div className="header-wp">
-      <Header></Header>
+      <Header title={title}></Header>
       <Filter></Filter>
     </div>
   );

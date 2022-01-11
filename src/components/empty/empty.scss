@@ -1,13 +1,11 @@
 .empty {
-  // width: 100%;
-  // max-width: 336px;
   height: 421px;
   background-image: url(../../img/no-result.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   color: #fff;
-  // margin: 0 auto;
+  border-radius: 32px;
 }
 
 .empty__wp {

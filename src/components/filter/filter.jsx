@@ -7,11 +7,9 @@ const Filter = () => {
     <div className="filter">
       <ul className="filter__list">
         <li>
-          <Link to="./favorite">
-            <button type="button" className="filter__item">
-              Новинки
-            </button>
-          </Link>
+          <button type="button" className="filter__item">
+            Новинки
+          </button>
         </li>
         <li>
           <button type="button" className="filter__item">

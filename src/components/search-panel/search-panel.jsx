@@ -1,13 +1,12 @@
 import React from "react";
 import "./search-panel.scss";
 import { Link } from "react-router-dom";
+import Button from "../button/button";
 
-const SearchPanel = () => {
+const SearchPanel = ({address, text}) => {
   return (
     <footer className="search-panel">
-      <button type="button" className="search-panel__button">
-        Избранные
-      </button>
+        <Button address={address} text={text}></Button>
       <button type="button" className="search-panel__button-search">
         <svg
           className="search-panel__icon"

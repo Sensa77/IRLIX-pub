@@ -8,7 +8,7 @@ const Main = () => {
     <div>
       <HeaderWp />
       <Cards />
-      <SearchPanel />
+      <SearchPanel address="./favorite" text="Избранные"></SearchPanel>
     </div>
   );
 };

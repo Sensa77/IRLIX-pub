@@ -13,22 +13,8 @@
   z-index: 2;
 }
 
-.search-panel__button {
-  display: none;
-  width: 145px;
-  height: 48px;
-  border-radius: 32px;
-  background-color: #44414e;
-  border: none;
-  font-size: 18px;
-  line-height: 17px;
-  color: #c4c1cf;
-  font-weight: 500;
-  margin-right: 14px;
-}
-
 .search-panel__input {
-  display: block;
+  display: none;
   position: relative;
   width: 100%;
   height: 48px;
@@ -43,18 +29,19 @@
 }
 
 .search-panel__button-search {
+  display: block;
   border: none;
   background-color: initial;
   padding-top: 12px;
 }
 
 .search-panel__icon {
-  display: none;
   width: 24px;
   height: 24px;
 }
 
 .search-panel__cross {
+  display: none;
   position: absolute;
   border: none;
   background-color: transparent;
