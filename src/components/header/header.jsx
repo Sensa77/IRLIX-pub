@@ -1,13 +1,16 @@
 import React from "react";
 import "./header.scss";
+import { getDate } from "../../utils/getDate";
 
-const Header = ({ title = "Главная", date = "17 июля 2021" }) => {
+const Header = ({ title = "Главная"}) => {
+  const currentDate = getDate()
+
   return (
     <header className="header">
       <div className="header__wrapper">
         <h1 className="header__title">{title}</h1>
         <time dateTime="2021-07-17" className="header__data">
-          {date}
+          {currentDate}
         </time>
       </div>
       <svg
