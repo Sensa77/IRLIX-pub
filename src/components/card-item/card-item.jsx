@@ -1,10 +1,13 @@
 import React from "react";
 import "./card-item.scss";
 import { Link } from "react-router-dom";
-const CardItem = ({name, comment, alcohol, imgURL}) => {
+const CardItem = ({ name, comment, alcohol, imgURL, id }) => {
   return (
-    <Link to="/detail">
-      <div className="cardItem" style={{backgroundImage: `url(/assets/${imgURL}.jpg)`}}>
+    <Link to={`/detail/${id}`}>
+      <div
+        className="cardItem"
+        style={{ backgroundImage: `url(/assets/${imgURL}.jpg)` }}
+      >
         <div className="cardItem__wp">
           <span className="cardItem__name">{name}</span>
           <span className="cardItem__filter">{comment}</span>

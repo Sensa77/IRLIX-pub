@@ -8,17 +8,26 @@ import { useEffect } from "react";
 import { getCocktail, getCocktails } from "../../utils/api";
 
 const Cards = () => {
-  const [cocktails, setCocktails] = useState([])
-  useEffect (() => {
-fetch(getCocktails())
-.then((res) => res.json())
-.then((data) => setCocktails(data))
-  }, [])
-  console.log(cocktails)
+  const [cocktails, setCocktails] = useState([]);
+  useEffect(() => {
+    fetch(getCocktails())
+      .then((res) => res.json())
+      .then((data) => setCocktails(data));
+  }, []);
+
   return (
     <main className="cards">
       {cocktails.map((cocktail) => {
-        return <CardItem key={cocktail.name} name={cocktail.name} comment={cocktail.comment} alcohol={cocktail.alcohol} imgURL={cocktail.imgURL}></CardItem>
+        return (
+          <CardItem
+            key={cocktail.name}
+            name={cocktail.name}
+            comment={cocktail.comment}
+            alcohol={cocktail.alcohol}
+            imgURL={cocktail.imgURL}
+            id={cocktail.id}
+          ></CardItem>
+        );
       })}
     </main>
   );

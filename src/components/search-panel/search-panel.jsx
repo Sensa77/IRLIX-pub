@@ -1,6 +1,5 @@
 import React from "react";
 import "./search-panel.scss";
-import { Link } from "react-router-dom";
 import Button from "../button/button";
 import { useState } from "react";
 

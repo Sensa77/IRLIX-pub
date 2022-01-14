@@ -1,12 +1,12 @@
-import React from 'react';
-import "./title.scss"
+import React from "react";
+import "./title.scss";
 
-const Title = () => {
+const Title = ({ name, comment }) => {
   return (
-      <div className='title-wrap'>
-      <span className='name'>Blackberry</span>
-      <span className='filter'>Fresh drink</span>
+    <div className="title-wrap">
+      <span className="name">{name}</span>
+      <span className="filter">{comment}</span>
     </div>
-  )
-}
-export default Title
+  );
+};
+export default Title;
