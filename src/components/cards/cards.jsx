@@ -6,14 +6,21 @@ import Empty from "../empty/empty";
 import "./cards.scss";
 import { useEffect } from "react";
 import { getCocktail, getCocktails } from "../../utils/api";
+import Spinner from "../spinner/spinner";
 
 const Cards = () => {
   const [cocktails, setCocktails] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch(getCocktails())
       .then((res) => res.json())
-      .then((data) => setCocktails(data));
+      .then((data) => setCocktails(data))
+      .then(() => setLoading(false));
   }, []);
+
+  if (loading) {
+    return <Spinner></Spinner>;
+  }
 
   return (
     <main className="cards">
