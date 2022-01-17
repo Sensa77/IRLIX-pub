@@ -6,18 +6,25 @@ import { getCocktail } from "../../utils/api";
 import { useEffect } from "react";
 import { useState } from "react";
 import Spinner from "../spinner/spinner";
+import Error from "../error/error";
 
 const DetailPage = () => {
   const { id } = useParams();
   const [cocktail, setCocktail] = useState();
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch(getCocktail(id))
       .then((res) => res.json())
       .then((data) => setCocktail(data))
-      .then(() => setLoading(false));
+      .then(() => setLoading(false))
+      .catch(() => setError(true));
   }, []);
+
+  if (error) {
+    return <Error></Error>;
+  }
 
   if (loading) {
     return <Spinner></Spinner>;

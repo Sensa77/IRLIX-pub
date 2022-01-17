@@ -1,0 +1,21 @@
+.error {
+  padding-top: 100px;
+  padding-right: 32px;
+  padding-left: 32px;
+  height: 670px;
+}
+
+.error__title {
+  display: block;
+  font-size: 32px;
+  line-height: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.error__description {
+  font-size: 28px;
+  line-height: 30px;
+  margin: 0;
+}
