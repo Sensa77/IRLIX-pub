@@ -1,30 +1,64 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation, NavLink } from "react-router-dom";
 import "./filter.scss";
 
 const Filter = () => {
+  const { pathname, search } = useLocation();
   return (
     <div className="filter">
       <ul className="filter__list">
         <li>
-          <button type="button" className="filter__item">
-            Новинки
-          </button>
+          <Link to={`${pathname}?isNew=true`}>
+            <button
+              type="button"
+              className="filter__item"
+              style={{
+                border: search === "?isNew=true" ? "2px solid white" : "none",
+              }}
+            >
+              Новинки
+            </button>
+          </Link>
         </li>
         <li>
-          <button type="button" className="filter__item">
-            Сладкие
-          </button>
+          <Link to={`${pathname}?isSweet=true`}>
+            <button
+              type="button"
+              className="filter__item"
+              style={{
+                border: search === "?isSweet=true" ? "2px solid white" : "none",
+              }}
+            >
+              Сладкие
+            </button>
+          </Link>
         </li>
         <li>
-          <button type="button" className="filter__item">
-            Хит
-          </button>
+          <Link to={`${pathname}?isHit=true`}>
+            <button
+              type="button"
+              className="filter__item"
+              style={{
+                border: search === "?isHit=true" ? "2px solid white" : "none",
+              }}
+            >
+              Хит
+            </button>
+          </Link>
         </li>
         <li>
-          <button type="button" className="filter__item">
-            Крепкие
-          </button>
+          <Link to={`${pathname}?isStrong=true`}>
+            <button
+              type="button"
+              className="filter__item"
+              style={{
+                border:
+                  search === "?isStrong=true" ? "2px solid white" : "none",
+              }}
+            >
+              Крепкие
+            </button>
+          </Link>
         </li>
       </ul>
     </div>

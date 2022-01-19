@@ -7,18 +7,21 @@ import { useEffect } from "react";
 import { getCocktail, getCocktails } from "../../utils/api";
 import Spinner from "../spinner/spinner";
 import Error from "../error/error";
+import { useLocation } from "react-router";
 
 const Cards = () => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const { search } = useLocation();
+
   useEffect(() => {
-    fetch(getCocktails())
+    fetch(getCocktails(search))
       .then((res) => res.json())
       .then((data) => setCocktails(data))
       .then(() => setLoading(false))
       .catch(() => setError(true));
-  }, []);
+  }, [search]);
 
   if (error) {
     return <Error></Error>;
