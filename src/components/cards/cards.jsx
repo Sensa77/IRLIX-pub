@@ -8,12 +8,15 @@ import { getCocktail, getCocktails } from "../../utils/api";
 import Spinner from "../spinner/spinner";
 import Error from "../error/error";
 import { useLocation } from "react-router";
+import { useSelector } from "react-redux";
 
 const Cards = () => {
+  const searchValue = useSelector((state) => state.search.value).toLowerCase();
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const { search } = useLocation();
+  const [filteredCocktails, setFilteredCocktails] = useState([]);
 
   useEffect(() => {
     fetch(getCocktails(search))
@@ -23,19 +26,35 @@ const Cards = () => {
       .catch(() => setError(true));
   }, [search]);
 
-  if (error) {
-    return <Error></Error>;
-  }
 
-  if (loading) {
-    return <Spinner></Spinner>;
-  }
+
+  useEffect(() => {
+    if (searchValue) {
+      const filtered = cocktails.filter(({ name }) => {
+        const lowerName = name.toLowerCase();
+        return lowerName.includes(searchValue);
+      });
+      setFilteredCocktails(filtered);
+    } else {
+      setFilteredCocktails(cocktails)
+    }
+  }, [searchValue, cocktails]);
 
   return (
     <main className="cards">
-      {cocktails.map((cocktail) => {
-        return (
-          <div>
+      {loading && <Spinner />}
+      {error && <Error />}
+      {!loading &&
+        !error &&
+        !filteredCocktails.length &&
+        <Empty />
+      }
+
+      {!loading &&
+        !error &&
+        !!filteredCocktails.length &&
+        filteredCocktails.map((cocktail) => {
+          return (
             <CardItem
               key={cocktail.name}
               name={cocktail.name}
@@ -43,12 +62,25 @@ const Cards = () => {
               alcohol={cocktail.alcohol}
               imgURL={cocktail.imgURL}
               id={cocktail.id}
-            ></CardItem>
-          </div>
-        );
-      })}
+            />
+          );
+        })}
     </main>
   );
+
+  // if (error) {
+  //   return <Error />
+  // }
+
+  // if (loading) {
+  //   return <Spinner />
+  // }
+
+  // if(!filteredCocktails.length) {
+  //   return <Empty />
+  // }
+
+  // );
 };
 
 export default Cards;

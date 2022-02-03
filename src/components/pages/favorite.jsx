@@ -5,11 +5,11 @@ import HeaderWp from "../header-wp/header-wp"
 
 const Favorite = () => {
   return (
-    <div>
+    <>
     <HeaderWp title="Избранные"></HeaderWp>
       <Cards></Cards>
       <SearchPanel address="/" text="Назад"></SearchPanel>
-    </div>
+    </>
   )
 }
 

@@ -5,11 +5,11 @@ import SearchPanel from "../search-panel/search-panel";
 
 const Main = () => {
   return (
-    <div>
+    <>
       <HeaderWp />
       <Cards />
       <SearchPanel address="./favorite" text="Избранные"></SearchPanel>
-    </div>
+    </>
   );
 };
 

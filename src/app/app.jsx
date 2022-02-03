@@ -7,6 +7,8 @@ import DetailPage from "../components/pages/detail-page";
 import Favorite from "../components/pages/favorite";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+
+
 const App = () => {
   return (
     <div className="app">

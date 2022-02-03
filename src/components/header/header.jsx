@@ -2,15 +2,19 @@ import React from "react";
 import "./header.scss";
 import { getDate } from "../../utils/getDate";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = ({ title = "Главная" }) => {
   const currentDate = getDate();
 
+  const search = useSelector((state) => state.search.value)
+  const searchTitle = search ? "Поиск" : title
+  
   return (
     <header className="header">
       <div className="header__wrapper">
         <Link to="">
-          <h1 className="header__title">{title}</h1>
+          <h1 className="header__title">{searchTitle}</h1>
         </Link>
         <time dateTime="2021-07-17" className="header__data">
           {currentDate}

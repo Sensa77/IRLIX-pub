@@ -31,7 +31,7 @@ const DetailPage = () => {
   }
 
   return (
-    <div>
+    <>
       <HeaderDetail imgUrl={cocktail.imgURL}></HeaderDetail>
       <BodyDetail
         name={cocktail.name}
@@ -39,7 +39,7 @@ const DetailPage = () => {
         recipe={cocktail.recipe}
         ingredients={cocktail.ingredients}
       ></BodyDetail>
-    </div>
+    </>
   );
 };
 

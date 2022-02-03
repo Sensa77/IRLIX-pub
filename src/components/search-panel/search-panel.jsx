@@ -2,22 +2,33 @@ import React from "react";
 import "./search-panel.scss";
 import Button from "../button/button";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { change } from "./search-panel-slice";
+
 
 const SearchPanel = ({ address, text }) => {
   const [isSearch, setIsSearch] = useState(false);
+  let search = useSelector((state) => state.search.value)
+  const dispatch = useDispatch()
 
   return (
     <footer className="search-panel">
       {isSearch ? (
         <>
           <input
+          autoFocus
             type="text"
             className="search-panel__input"
             placeholder="Введите название"
+            value={search}
+            onChange={(e) => dispatch(change(e.target.value))}
           ></input>
           <button
             className="search-panel__cross"
-            onClick={() => setIsSearch(false)}
+            onClick={() => {
+              dispatch(change(search=""))
+            setIsSearch(false)}
+          }
           >
             <svg
               width="24"

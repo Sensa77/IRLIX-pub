@@ -1,4 +1,6 @@
 .cards {
+  margin-bottom: 28px;
+  flex: 1 0 auto;
   max-width: 1920px;
   display: grid;
   row-gap: 28px;
@@ -6,7 +8,7 @@
   position: relative;
   padding-right: 32px;
   padding-left: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 336px));
 }
 
 @media (min-width: 768px) {

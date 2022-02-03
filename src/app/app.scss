@@ -1,4 +1,7 @@
 .app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
@@ -8,9 +11,7 @@
   margin-bottom: 48px;
 }
 
-.cards {
-  margin-bottom: 28px;
-}
+
 
 @media (min-width: 768px) {
   .app {

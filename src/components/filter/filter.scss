@@ -17,6 +17,8 @@
   font-weight: 300;
 }
 
-.active {
-  border: 2px solid green;
+.filter__item:hover,
+.filter__item:focus {
+  color: #fff;
 }
+
