@@ -1,0 +1,23 @@
+.favorites-indicator {
+  padding-top: 50px;
+  padding-bottom: 62px;
+  background: linear-gradient(
+    180deg,
+    #0e0d13 0%,
+    rgba(14, 13, 19, 0.9) 46.54%,
+    rgba(14, 13, 19, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.favorites-indicator__title {
+  text-align: center;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ff005c;
+  font-weight: 700;
+}

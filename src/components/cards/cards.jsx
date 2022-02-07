@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import CardItem from "../card-item/card-item";
-import Bookmark from "../bookmark/bookmark";
 import Empty from "../empty/empty";
 import "./cards.scss";
 import { useEffect } from "react";
-import { getCocktail, getCocktails } from "../../utils/api";
+import { fetchCocktail, getCocktails } from "../../utils/api";
 import Spinner from "../spinner/spinner";
 import Error from "../error/error";
 import { useLocation } from "react-router";
@@ -62,6 +61,7 @@ const Cards = () => {
               alcohol={cocktail.alcohol}
               imgURL={cocktail.imgURL}
               id={cocktail.id}
+              isFavorite={cocktail.isFavorite}
             />
           );
         })}

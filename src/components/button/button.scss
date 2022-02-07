@@ -11,3 +11,15 @@
   font-weight: 500;
   margin-right: 14px;
 }
+
+.search-panel__button:hover, 
+.search-panel__button:focus {
+  background-color: #353240;
+  color: #E9E6F2;
+}
+
+.search-panel__button:active {
+  background-color: #120E20;
+  color: #FF005C;
+  border: 1px solid #FF005C;
+}

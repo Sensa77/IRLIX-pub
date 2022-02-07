@@ -2,7 +2,6 @@ import React from "react";
 import "./recipe.scss";
 
 const Recipe = ({ recipe = [] }) => {
-  console.log(recipe);
   return (
     <div className="recipe">
       <span className="recipe__title">Как готовить</span>

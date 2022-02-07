@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import BodyDetail from "../body-detail/body-detail";
 import HeaderDetail from "../header-detail/header-detail";
-import { getCocktail } from "../../utils/api";
+import { fetchCocktail } from "../../utils/api";
 import { useEffect } from "react";
 import { useState } from "react";
 import Spinner from "../spinner/spinner";
@@ -15,7 +15,7 @@ const DetailPage = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch(getCocktail(id))
+    fetch(fetchCocktail(id))
       .then((res) => res.json())
       .then((data) => setCocktail(data))
       .then(() => setLoading(false))

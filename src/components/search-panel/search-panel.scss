@@ -35,6 +35,11 @@
   padding-top: 12px;
 }
 
+.search-panel__button-search:hover path, 
+.search-panel__button-search:focus path {
+fill: #fff;
+}
+
 .search-panel__icon {
   width: 24px;
   height: 24px;
@@ -49,4 +54,9 @@
   height: 24px;
   right: 49px;
   padding: 0;
+}
+
+.search-panel__cross:hover path, 
+.search-panel__cross:focus path {
+fill: #fff;
 }

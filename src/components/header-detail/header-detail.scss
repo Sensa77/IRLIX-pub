@@ -23,3 +23,22 @@
   padding-top: 7px;
   z-index: 6;
 }
+
+.header__back:hover, 
+.header__back:focus {
+  background-color: #353240;
+}
+
+.header__back:hover path, 
+.header__back:focus path {
+  fill:#E9E6F2;
+}
+
+.header__back:active {
+  background-color: #120E20;
+  border: 1px solid #FF005C;
+}
+
+.header__back:active path {
+  fill: #FF005C;
+}

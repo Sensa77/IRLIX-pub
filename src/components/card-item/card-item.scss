@@ -1,65 +1,72 @@
-.cardItem {
-  height: 421px;
-  background-repeat: no-repeat;
-  background-size: cover;
+.card-item {
   position: relative;
-  z-index: 0;
-  border-radius: 32px;
-  color: #fff;
-  background-position-x: 45%;
 }
 
-.cardItem:hover,
-.cardItem:focus {
+.card-item__content:hover,
+.card-item__content:focus {
   box-shadow: -1px -1px 13px 7px rgba(255, 255, 255, 0.2);
 }
 
-.cardItem__wp {
+.card-item__content {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 32px;
-  bottom: 24px;
-  align-items: flex-start;
+  height: 421px;
+  justify-content: space-between;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 32px;
+  color: #fff;
+  background-position-x: 45%;
+  z-index: 0;
 }
 
-.cardItem__name {
+.card-item__wp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 32px;
+  margin-bottom: 24px;
+}
+
+.card-item__name {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   color: #fff;
 }
 
-.cardItem__filter {
+.card-item__filter {
   font-size: 18px;
   line-height: 21px;
   font-weight: 300;
   color: #c4c1cf;
 }
 
-.cardItem__composition {
+.card-item__composition {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: 80px;
   height: 80px;
-  position: absolute;
-  top: 18px;
-  left: 18px;
   background-color: #0e0d13;
   border-radius: 24px;
   padding-top: 19px;
   padding-bottom: 21px;
   padding-right: 8px;
+  margin-top: 18px;
+  margin-left: 18px;
 }
 
-.cardItem__composition-perсent {
+
+
+.card-item__composition-perсent {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
 }
 
-.cardItem__composition-title {
+.card-item__composition-title {
   font-size: 14px;
   line-height: 16px;
   font-weight: 300;
@@ -67,7 +74,7 @@
 }
 
 @media (min-width: 768px) {
-  .cardItem {
+  .card-item {
     // max-width: 336px;
     height: 421px;
     margin: 0;

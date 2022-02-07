@@ -4,6 +4,6 @@ export const getCocktails = (search) => {
   return `${API}cocktails${search}`;
 };
 
-export const getCocktail = (id) => {
+export const fetchCocktail = (id) => {
   return `${API}cocktails/${id}`;
 };
