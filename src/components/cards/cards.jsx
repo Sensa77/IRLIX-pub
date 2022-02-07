@@ -3,29 +3,33 @@ import CardItem from "../card-item/card-item";
 import Empty from "../empty/empty";
 import "./cards.scss";
 import { useEffect } from "react";
-import { fetchCocktail, getCocktails } from "../../utils/api";
+// import { fetchCocktail, getCocktails } from "../../utils/api";
 import Spinner from "../spinner/spinner";
 import Error from "../error/error";
 import { useLocation } from "react-router";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getCocktailsData } from "./cards-slice";
 
 const Cards = () => {
   const searchValue = useSelector((state) => state.search.value).toLowerCase();
   const [cocktails, setCocktails] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
   const { search } = useLocation();
   const [filteredCocktails, setFilteredCocktails] = useState([]);
+  const dispatch = useDispatch()
+  const cocktailsData = useSelector((state) => state.card.cocktails)
+  const status = useSelector((state) => state.card.status)
 
-  useEffect(() => {
-    fetch(getCocktails(search))
-      .then((res) => res.json())
-      .then((data) => setCocktails(data))
-      .then(() => setLoading(false))
-      .catch(() => setError(true));
-  }, [search]);
+  // useEffect(() => {
+  //   fetch(getCocktails(search))
+  //     .then((res) => res.json())
+  //     .then((data) => setCocktails(data))
+  //     .then(() => setLoading(false))
+  //     .catch(() => setError(true));
+  // }, [search]);
 
-
+useEffect(() => {
+dispatch(getCocktailsData(search))
+}, [search])
 
   useEffect(() => {
     if (searchValue) {
@@ -41,18 +45,16 @@ const Cards = () => {
 
   return (
     <main className="cards">
-      {loading && <Spinner />}
-      {error && <Error />}
-      {!loading &&
+      {status === "loading" && <Spinner />}
+      {status === "error" && <Error />}
+      {/* {!loading &&
         !error &&
         !filteredCocktails.length &&
         <Empty />
-      }
+      } */}
 
-      {!loading &&
-        !error &&
-        !!filteredCocktails.length &&
-        filteredCocktails.map((cocktail) => {
+      {status === "done" &&
+        cocktailsData.map((cocktail) => {
           return (
             <CardItem
               key={cocktail.name}
