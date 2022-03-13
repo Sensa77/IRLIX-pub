@@ -3,13 +3,13 @@ import CardItem from "../card-item/card-item";
 import Empty from "../empty/empty";
 import "./cards.scss";
 import { useEffect } from "react";
-import { fetchCocktail, getCocktails } from "../../utils/api";
+import { getCocktails } from "../../utils/api";
 import Spinner from "../spinner/spinner";
 import Error from "../error/error";
 import { useLocation } from "react-router";
 import { useSelector } from "react-redux";
 
-const Cards = () => {
+const Cards = ({ searchParams }) => {
   const searchValue = useSelector((state) => state.search.value).toLowerCase();
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -18,14 +18,12 @@ const Cards = () => {
   const [filteredCocktails, setFilteredCocktails] = useState([]);
 
   useEffect(() => {
-    fetch(getCocktails(search))
+    fetch(getCocktails(searchParams || search))
       .then((res) => res.json())
       .then((data) => setCocktails(data))
       .then(() => setLoading(false))
       .catch(() => setError(true));
-  }, [search]);
-
-
+  }, [search, searchParams]);
 
   useEffect(() => {
     if (searchValue) {
@@ -35,7 +33,7 @@ const Cards = () => {
       });
       setFilteredCocktails(filtered);
     } else {
-      setFilteredCocktails(cocktails)
+      setFilteredCocktails(cocktails);
     }
   }, [searchValue, cocktails]);
 
@@ -43,11 +41,7 @@ const Cards = () => {
     <main className="cards">
       {loading && <Spinner />}
       {error && <Error />}
-      {!loading &&
-        !error &&
-        !filteredCocktails.length &&
-        <Empty />
-      }
+      {!loading && !error && !filteredCocktails.length && <Empty />}
 
       {!loading &&
         !error &&
@@ -67,20 +61,6 @@ const Cards = () => {
         })}
     </main>
   );
-
-  // if (error) {
-  //   return <Error />
-  // }
-
-  // if (loading) {
-  //   return <Spinner />
-  // }
-
-  // if(!filteredCocktails.length) {
-  //   return <Empty />
-  // }
-
-  // );
 };
 
 export default Cards;

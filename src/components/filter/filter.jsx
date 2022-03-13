@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link, useLocation, NavLink } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./filter.scss";
 
 const Filter = () => {
-  const { pathname, search } = useLocation();
+  const { search } = useLocation();
   return (
     <div className="filter">
       <ul className="filter__list">
         <li>
-          <Link to={`${pathname}?isNew=true`}>
+          <Link to={`/?isNew=true`}>
             <button
               type="button"
               className="filter__item"
@@ -21,7 +21,7 @@ const Filter = () => {
           </Link>
         </li>
         <li>
-          <Link to={`${pathname}?isSweet=true`}>
+          <Link to={`/?isSweet=true`}>
             <button
               type="button"
               className="filter__item"
@@ -34,7 +34,7 @@ const Filter = () => {
           </Link>
         </li>
         <li>
-          <Link to={`${pathname}?isHit=true`}>
+          <Link to={`/?isHit=true`}>
             <button
               type="button"
               className="filter__item"
@@ -47,7 +47,7 @@ const Filter = () => {
           </Link>
         </li>
         <li>
-          <Link to={`${pathname}?isStrong=true`}>
+          <Link to={`/?isStrong=true`}>
             <button
               type="button"
               className="filter__item"

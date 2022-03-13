@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./card-item.scss";
 import { Link } from "react-router-dom";
 import Bookmark from "../bookmark/bookmark";
@@ -7,6 +7,7 @@ import FavoritesIndicator from "../favorites-indicator/favorites-indicator";
 const CardItem = ({ name, comment, alcohol, imgURL, id, isFavorite }) => {
   const [bookmark, setBookmark] = useState(isFavorite);
   const [isShow, setIsShow] = useState(false);
+  const [timerId, setTimerId] = useState();
   const addFavorite = (id) => {
     const favoriteBody = {
       isFavorite: !isFavorite,
@@ -21,10 +22,23 @@ const CardItem = ({ name, comment, alcohol, imgURL, id, isFavorite }) => {
     })
       .then(() => setBookmark(!bookmark))
       .then(() => {
-        setIsShow(true);
-        setTimeout(()=> setIsShow(false), 2000)
+        if (bookmark === false) {
+          setIsShow(true);
+          setTimerId(setTimeout(() => setIsShow(false), 5000));
+        } else {
+          setIsShow(false);
+        }
       });
   };
+
+  useEffect(() => {
+    if (timerId) {
+      return () => {
+        clearTimeout(timerId);
+      };
+    }
+  }, [timerId]);
+
   return (
     <>
       {isShow ? <FavoritesIndicator /> : null}
