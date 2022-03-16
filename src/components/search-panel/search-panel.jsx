@@ -3,20 +3,19 @@ import "./search-panel.scss";
 import Button from "../button/button";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { change } from "./search-panel-slice";
-
+import { change } from "../cards/cards-slice";
 
 const SearchPanel = ({ address, text }) => {
   const [isSearch, setIsSearch] = useState(false);
-  let search = useSelector((state) => state.search.value)
-  const dispatch = useDispatch()
+  let search = useSelector((state) => state.cards.value);
+  const dispatch = useDispatch();
 
   return (
     <footer className="search-panel">
       {isSearch ? (
         <>
           <input
-          autoFocus
+            autoFocus
             type="text"
             className="search-panel__input"
             placeholder="Введите название"
@@ -26,9 +25,9 @@ const SearchPanel = ({ address, text }) => {
           <button
             className="search-panel__cross"
             onClick={() => {
-              dispatch(change(search=""))
-            setIsSearch(false)}
-          }
+              dispatch(change((search = "")));
+              setIsSearch(false);
+            }}
           >
             <svg
               width="24"

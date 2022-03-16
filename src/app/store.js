@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import searchPanelReducer from "../components/search-panel/search-panel-slice";
-import cardsReducer from "../components/cards/cards-slice"
+import cardsReducer from "../components/cards/cards-slice";
+import detailReducer from "../components/pages/detail-page/detailPageSlice";
 export const store = configureStore({
   reducer: {
-    search: searchPanelReducer,
-    card: cardsReducer
-  }
-})
+    cards: cardsReducer,
+    detail: detailReducer,
+  },
+});

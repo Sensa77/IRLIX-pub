@@ -3,11 +3,9 @@ import "../index.scss";
 import "../normalize.scss";
 import "./app.scss";
 import Main from "../components/pages/main";
-import DetailPage from "../components/pages/detail-page";
+import DetailPage from "../components/pages/detail-page/detailPageSlice";
 import Favorite from "../components/pages/favorite";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-
 
 const App = () => {
   return (

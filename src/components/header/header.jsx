@@ -7,9 +7,9 @@ import { useSelector } from "react-redux";
 const Header = ({ title = "Главная" }) => {
   const currentDate = getDate();
 
-  const search = useSelector((state) => state.search.value)
-  const searchTitle = search ? "Поиск" : title
-  
+  const search = useSelector((state) => state.cards.value);
+  const searchTitle = search ? "Поиск" : title;
+
   return (
     <header className="header">
       <div className="header__wrapper">

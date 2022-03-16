@@ -2,34 +2,47 @@ import React, { useState } from "react";
 import "./card-item.scss";
 import { Link } from "react-router-dom";
 import Bookmark from "../bookmark/bookmark";
-import { fetchCocktail } from "../../utils/api";
 import FavoritesIndicator from "../favorites-indicator/favorites-indicator";
+import { addFavoriteCocktail } from "../cards/cards-slice";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 const CardItem = ({ name, comment, alcohol, imgURL, id, isFavorite }) => {
+  const dispatch = useDispatch();
   const [bookmark, setBookmark] = useState(isFavorite);
   const [isShow, setIsShow] = useState(false);
-  const addFavorite = (id) => {
-    const favoriteBody = {
-      isFavorite: !isFavorite,
-    };
-
-    fetch(fetchCocktail(id), {
-      method: "PUT",
-      body: JSON.stringify(favoriteBody),
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-    })
-      .then(() => setBookmark(!bookmark))
-      .then(() => {
-        setIsShow(true);
-        setTimeout(()=> setIsShow(false), 2000)
-      });
+  const [timerId, setTimerId] = useState();
+  const favoriteBody = {
+    isFavorite: !bookmark,
   };
+
+  useEffect(() => {
+    if (timerId) {
+      return () => {
+        clearTimeout(timerId);
+      };
+    }
+  }, [timerId]);
+
   return (
     <>
       {isShow ? <FavoritesIndicator /> : null}
       <div className="card-item">
-        <Bookmark isFavorite={bookmark} onClick={() => addFavorite(id)} />
+        <Bookmark
+          isFavorite={bookmark}
+          onClick={() => {
+            dispatch(addFavoriteCocktail({ id, favoriteBody })).then(
+              ({ payload }) => {
+                setBookmark(payload.isFavorite);
+                if (payload.isFavorite) {
+                  setIsShow(true);
+                  setTimeout(() => setIsShow(false), 2000);
+                } else {
+                  setIsShow(false);
+                }
+              }
+            );
+          }}
+        />
         <Link to={`/detail/${id}`}>
           <div
             className="card-item__content"
