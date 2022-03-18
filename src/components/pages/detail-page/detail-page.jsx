@@ -27,7 +27,7 @@ const DetailPage = () => {
       {status === "error" && <Error />}
       {status === "done" && (
         <>
-          <Bookmark className="detail-page__bookmark" />
+          <Bookmark className="detail-page__bookmark" id={id} />
           <HeaderDetail imgUrl={cocktail.imgURL}></HeaderDetail>
           <BodyDetail
             name={cocktail.name}

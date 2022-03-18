@@ -6,6 +6,7 @@ const initialState = {
   cocktails: [],
   status: "no-status",
   value: "",
+  showIndicator: "",
 };
 export const getCocktailsData = createAsyncThunk(
   "getCocktailsData",
@@ -44,6 +45,9 @@ export const cardsSlice = createSlice({
     change: (state, action) => {
       state.value = action.payload;
     },
+    changeShowIndicator: (state, action) => {
+      state.showIndicator = action.payload;
+    },
   },
   extraReducers: {
     [getCocktailsData.pending]: (state) => {
@@ -59,5 +63,5 @@ export const cardsSlice = createSlice({
   },
 });
 
-export const { change } = cardsSlice.actions;
+export const { change, changeShowIndicator } = cardsSlice.actions;
 export default cardsSlice.reducer;
