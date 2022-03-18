@@ -1,6 +1,5 @@
 .bookmark {
   position: absolute;
-  top: -4px;
   right: 6.2%;
   border: none;
   background-color: initial;
@@ -8,10 +7,9 @@
 }
 
 .bookmark path {
-  fill: #C4C1CF;
+  fill: #c4c1cf;
 }
 
-.bookmark--active path
-{
-  fill: #FF005C;
+.bookmark--active path {
+  fill: #ff005c;
 }

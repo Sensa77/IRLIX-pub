@@ -8,12 +8,14 @@ import Error from "../../error/error";
 import { useDispatch } from "react-redux";
 import { getDetailData } from "./detailPageSlice";
 import { useSelector } from "react-redux";
+import Bookmark from "../../bookmark/bookmark";
+import "./detail-page.scss";
 
 const DetailPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const status = useSelector((state) => state.cards.status);
-  const cocktail = useSelector((state) => state.cards.cocktail);
+  const status = useSelector((state) => state.detail.status);
+  const cocktail = useSelector((state) => state.detail.cocktail);
 
   useEffect(() => {
     dispatch(getDetailData({ id }));
@@ -25,6 +27,7 @@ const DetailPage = () => {
       {status === "error" && <Error />}
       {status === "done" && (
         <>
+          <Bookmark className="detail-page__bookmark" />
           <HeaderDetail imgUrl={cocktail.imgURL}></HeaderDetail>
           <BodyDetail
             name={cocktail.name}

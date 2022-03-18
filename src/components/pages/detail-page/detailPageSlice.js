@@ -3,6 +3,7 @@ import { fetchCocktail } from "../../../utils/api";
 
 const initialState = {
   cocktail: {},
+  status: "no-status",
 };
 
 export const getDetailData = createAsyncThunk(

@@ -28,6 +28,7 @@ const CardItem = ({ name, comment, alcohol, imgURL, id, isFavorite }) => {
       {isShow ? <FavoritesIndicator /> : null}
       <div className="card-item">
         <Bookmark
+          className="main__bookmark"
           isFavorite={bookmark}
           onClick={() => {
             dispatch(addFavoriteCocktail({ id, favoriteBody })).then(
