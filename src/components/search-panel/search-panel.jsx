@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./search-panel.scss";
 import Button from "../button/button";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { change } from "../cards/cards-slice";
 

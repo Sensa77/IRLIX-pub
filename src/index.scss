@@ -34,6 +34,15 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../src/fonts/Roboto-Light.woff") format("woff"),
+    url("../src/fonts/Roboto-Light.eot") format("eot"),
+    url("../src/fonts/Roboto-Light.ttf") format("ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
 body {
   font-family: "Roboto", "Arial", sans-serif;
   margin: 0 auto;

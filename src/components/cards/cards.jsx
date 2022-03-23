@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardItem from "../card-item/card-item";
 import "./cards.scss";
-import { useEffect } from "react";
 import Spinner from "../spinner/spinner";
 import Error from "../error/error";
 import { useLocation } from "react-router";

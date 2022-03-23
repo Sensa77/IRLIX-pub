@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { getCocktails } from "../../utils/api";
-import { fetchCocktail } from "../../utils/api";
+import { getCocktails, fetchCocktail } from "../../utils/api";
 
 const initialState = {
   cocktails: [],

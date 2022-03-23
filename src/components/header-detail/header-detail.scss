@@ -5,9 +5,8 @@
   background-image: url(../../img/detail-header.png);
   background-repeat: no-repeat;
   position: relative;
-  background-attachment: fixed;
   z-index: 0;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .header__back {
@@ -24,21 +23,21 @@
   z-index: 6;
 }
 
-.header__back:hover, 
+.header__back:hover,
 .header__back:focus {
   background-color: #353240;
 }
 
-.header__back:hover path, 
+.header__back:hover path,
 .header__back:focus path {
-  fill:#E9E6F2;
+  fill: #e9e6f2;
 }
 
 .header__back:active {
-  background-color: #120E20;
-  border: 1px solid #FF005C;
+  background-color: #120e20;
+  border: 1px solid #ff005c;
 }
 
 .header__back:active path {
-  fill: #FF005C;
+  fill: #ff005c;
 }

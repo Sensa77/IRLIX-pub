@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./bookmark.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { useEffect } from "react";
-import { addFavoriteCocktail } from "../cards/cards-slice";
+import { addFavoriteCocktail, changeShowIndicator } from "../cards/cards-slice";
 import FavoritesIndicator from "../favorites-indicator/favorites-indicator";
-import { changeShowIndicator } from "../cards/cards-slice";
 
 const Bookmark = ({ isFavorite, className = "", id }) => {
   const dispatch = useDispatch();

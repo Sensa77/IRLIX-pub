@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
 import BodyDetail from "../../body-detail/body-detail";
 import HeaderDetail from "../../header-detail/header-detail";
-import { useEffect } from "react";
 import Spinner from "../../spinner/spinner";
 import Error from "../../error/error";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getDetailData } from "./detailPageSlice";
-import { useSelector } from "react-redux";
 import Bookmark from "../../bookmark/bookmark";
 import "./detail-page.scss";
 
@@ -22,7 +20,7 @@ const DetailPage = () => {
   }, []);
 
   return (
-    <>
+    <div className="detail-page">
       {status === "loading" && <Spinner />}
       {status === "error" && <Error />}
       {status === "done" && (
@@ -37,7 +35,7 @@ const DetailPage = () => {
           ></BodyDetail>
         </>
       )}
-    </>
+    </div>
   );
 };
 

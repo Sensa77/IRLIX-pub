@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./filter.scss";
 
 const Filter = () => {
-  const { pathname, search } = useLocation();
+  const { search } = useLocation();
   return (
     <div className="filter">
       <ul className="filter__list">
