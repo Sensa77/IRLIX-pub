@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
   padding-top: 32px;
   margin-bottom: 32px;
   border-radius: 0 32px 0 0;
-  background-color: #201f2e;
+  z-index: 3;
 }
 
 .name {

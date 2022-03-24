@@ -1,7 +1,9 @@
 .detail-page__bookmark {
   top: 348px;
+  z-index: 4;
 }
 
-// .detail-page {
-//   background-color: #0E0D13;
-// }
+.detail-page {
+  background-color: #0e0d13;
+  flex-grow: 1;
+}
