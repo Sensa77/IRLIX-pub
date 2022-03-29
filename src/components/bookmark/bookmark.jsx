@@ -6,7 +6,7 @@ import FavoritesIndicator from "../favorites-indicator/favorites-indicator";
 
 const Bookmark = ({ isFavorite, className = "", id }) => {
   const dispatch = useDispatch();
-  const [bookmark, setBookmark] = useState(isFavorite);
+  const [bookmark, setBookmark] = useState();
   const [timerId, setTimerId] = useState();
   const isShowIndicator = useSelector((state) => state.cards.showIndicator);
   const favoriteBody = {
@@ -15,12 +15,17 @@ const Bookmark = ({ isFavorite, className = "", id }) => {
   const active = bookmark ? "bookmark--active" : "";
 
   useEffect(() => {
+    setBookmark(isFavorite);
+  }, [isFavorite]);
+
+  useEffect(() => {
     if (timerId) {
       return () => {
         clearTimeout(timerId);
+        dispatch(changeShowIndicator(""));
       };
     }
-  }, [timerId]);
+  }, [timerId, dispatch]);
   return (
     <>
       <button

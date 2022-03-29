@@ -17,7 +17,7 @@ const DetailPage = () => {
 
   useEffect(() => {
     dispatch(getDetailData({ id }));
-  }, []);
+  }, [dispatch, id]);
 
   return (
     <div className="detail-page">
@@ -28,6 +28,7 @@ const DetailPage = () => {
           <Bookmark className="detail-page__bookmark" id={id} />
           <HeaderDetail imgUrl={cocktail.imgURL}></HeaderDetail>
           <BodyDetail
+            key={cocktail.name}
             name={cocktail.name}
             comment={cocktail.comment}
             recipe={cocktail.recipe}

@@ -1,5 +1,7 @@
 .recipe {
   text-align: start;
+  position: relative;
+  z-index: 2;
 }
 
 .recipe__title {

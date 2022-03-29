@@ -8,7 +8,7 @@ const Ingredients = ({ ingredients }) => {
       <ul className="ingredients__list">
         {ingredients?.map(({ name, amount }) => {
           return (
-            <li className="ingredients__item">
+            <li className="ingredients__item" key={name}>
               <span className="ingredients__name">{name}</span>
               <span className="ingredients__size">{amount}</span>
             </li>

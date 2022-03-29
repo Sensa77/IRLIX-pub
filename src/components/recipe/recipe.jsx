@@ -7,7 +7,7 @@ const Recipe = ({ recipe = [] }) => {
       <span className="recipe__title">Как готовить</span>
       <ul className="recipe__text">
         {recipe.map((text) => {
-          return <li>{text}</li>;
+          return <li key={text}>{text}</li>;
         })}
       </ul>
     </div>

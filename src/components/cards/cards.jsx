@@ -18,7 +18,7 @@ const Cards = ({ searchParams }) => {
 
   useEffect(() => {
     dispatch(getCocktailsData(searchParams || search));
-  }, [search, searchParams]);
+  }, [search, searchParams, dispatch]);
 
   useEffect(() => {
     if (searchValue) {
