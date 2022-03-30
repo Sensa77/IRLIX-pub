@@ -11,7 +11,7 @@ const CardItem = ({ name, comment, alcohol, imgURL, id, isFavorite }) => {
         <Link to={`/detail/${id}`}>
           <div
             className="card-item__content"
-            style={{ backgroundImage: `url(/assets/${imgURL}.jpg)` }}
+            style={{ backgroundImage: `url(/assets/min/${imgURL}.jpg)` }}
           >
             <div className="card-item__composition">
               <span className="card-item__composition-perсent">{alcohol}%</span>
