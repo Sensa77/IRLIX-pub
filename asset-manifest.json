@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/IRLIX-pub/static/css/main.c51a56f2.chunk.css",
-    "main.js": "/IRLIX-pub/static/js/main.19510435.chunk.js",
-    "main.js.map": "/IRLIX-pub/static/js/main.19510435.chunk.js.map",
+    "main.js": "/IRLIX-pub/static/js/main.a38cf8d2.chunk.js",
+    "main.js.map": "/IRLIX-pub/static/js/main.a38cf8d2.chunk.js.map",
     "runtime-main.js": "/IRLIX-pub/static/js/runtime-main.f710a8b6.js",
     "runtime-main.js.map": "/IRLIX-pub/static/js/runtime-main.f710a8b6.js.map",
-    "static/js/2.fe5c21b9.chunk.js": "/IRLIX-pub/static/js/2.fe5c21b9.chunk.js",
-    "static/js/2.fe5c21b9.chunk.js.map": "/IRLIX-pub/static/js/2.fe5c21b9.chunk.js.map",
+    "static/js/2.573a1d88.chunk.js": "/IRLIX-pub/static/js/2.573a1d88.chunk.js",
+    "static/js/2.573a1d88.chunk.js.map": "/IRLIX-pub/static/js/2.573a1d88.chunk.js.map",
     "index.html": "/IRLIX-pub/index.html",
     "static/css/main.c51a56f2.chunk.css.map": "/IRLIX-pub/static/css/main.c51a56f2.chunk.css.map",
-    "static/js/2.fe5c21b9.chunk.js.LICENSE.txt": "/IRLIX-pub/static/js/2.fe5c21b9.chunk.js.LICENSE.txt",
+    "static/js/2.573a1d88.chunk.js.LICENSE.txt": "/IRLIX-pub/static/js/2.573a1d88.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/IRLIX-pub/static/media/Roboto-Regular.31012f9b.woff",
     "static/media/header-detail.scss": "/IRLIX-pub/static/media/detail-header.f149176b.png",
     "static/media/error.11feaf13.png": "/IRLIX-pub/static/media/error.11feaf13.png",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f710a8b6.js",
-    "static/js/2.fe5c21b9.chunk.js",
+    "static/js/2.573a1d88.chunk.js",
     "static/css/main.c51a56f2.chunk.css",
-    "static/js/main.19510435.chunk.js"
+    "static/js/main.a38cf8d2.chunk.js"
   ]
 }
