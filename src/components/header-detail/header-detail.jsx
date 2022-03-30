@@ -7,7 +7,7 @@ const HeaderDetail = ({ imgUrl }) => {
     <div className="header">
       <div
         className="header__img"
-        style={{ backgroundImage: `url(/assets/${imgUrl}.jpg)` }}
+        style={{ backgroundImage: `url(/IRLIX-pub/assets/${imgUrl}.jpg)` }}
       ></div>
       <Link to="/">
         <button type="button" className="header__back">
